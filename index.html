@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Pitch Initiative | Summer 2025 Soccer Camps</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
+        .glass-nav { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+        .hero-gradient { background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.7)); }
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .animate-fade-up { animation: fadeUp 0.8s ease-out forwards; }
+        ::selection { background-color: #064e3b; color: white; }
+    </style>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: { 950: '#022c22', 900: '#064e3b', 800: '#065f46' },
+                        gold: { 500: '#d4af37', 600: '#b8860b' }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-slate-900">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#" class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-emerald-900 rounded-lg flex items-center justify-center shadow-lg">
+                    <span class="text-white font-bold text-xl">OP</span>
+                </div>
+                <span id="nav-logo-text" class="font-bold text-xl tracking-tight text-white transition-colors">
+                    OPEN PITCH <span class="text-yellow-500">INITIATIVE</span>
+                </span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#about" class="nav-link text-sm font-medium text-white/90 hover:text-yellow-500 transition-colors">About</a>
+                <a href="#camps" class="nav-link text-sm font-medium text-white/90 hover:text-yellow-500 transition-colors">Camps</a>
+                <a href="#location" class="nav-link text-sm font-medium text-white/90 hover:text-yellow-500 transition-colors">Location</a>
+                <a href="#donation" class="nav-link text-sm font-medium text-white/90 hover:text-yellow-500 transition-colors">Support</a>
+                <a href="#contact" class="nav-link text-sm font-medium text-white/90 hover:text-yellow-500 transition-colors">Contact</a>
+                <a href="#donation" class="bg-emerald-900 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-emerald-800 transition-all shadow-xl">Donate Now</a>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden text-white"><i data-lucide="menu"></i></button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-white shadow-2xl p-6 flex flex-col gap-4 border-t border-slate-100 text-slate-900">
+            <a href="#about" class="font-semibold text-lg">About</a>
+            <a href="#camps" class="font-semibold text-lg">Camps</a>
+            <a href="#location" class="font-semibold text-lg">Location</a>
+            <a href="#donation" class="font-semibold text-lg">Support</a>
+            <a href="#contact" class="font-semibold text-lg">Contact</a>
+            <a href="#donation" class="bg-emerald-900 text-white text-center py-4 rounded-xl font-bold">Donate Now</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen w-full flex items-center justify-center overflow-hidden bg-slate-900">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80" alt="Soccer" class="w-full h-full object-cover opacity-40">
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-6 max-w-4xl mx-auto opacity-0 animate-fade-up">
+            <span class="inline-block px-4 py-1.5 mb-6 bg-emerald-900/60 backdrop-blur-sm border border-emerald-500/30 text-emerald-300 rounded-full text-xs font-bold tracking-widest uppercase">Redmond, WA</span>
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight">Opening Doors <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-yellow-500">Through Soccer</span></h1>
+            <p class="text-xl md:text-2xl text-white/80 mb-10 max-w-2xl mx-auto font-light">Creating opportunities for players with talent and passion — regardless of financial situation.</p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#donation" class="w-full sm:w-auto px-10 py-5 bg-emerald-900 text-white rounded-full font-bold text-lg hover:bg-emerald-800 transition-all flex items-center justify-center gap-2 shadow-2xl shadow-emerald-900/40">Donate Now <i data-lucide="chevron-right" class="w-5 h-5"></i></a>
+                <a href="#contact" class="w-full sm:w-auto px-10 py-5 bg-white/10 backdrop-blur-md border border-white/20 text-white rounded-full font-bold text-lg hover:bg-white/20 transition-all">Register Player</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="aspect-square rounded-3xl overflow-hidden shadow-2xl">
+                <img src="https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&q=80" alt="About" class="w-full h-full object-cover">
+            </div>
+            <div>
+                <h2 class="text-4xl md:text-5xl font-bold text-emerald-900 mb-6">Our Mission</h2>
+                <p class="text-lg text-slate-600 mb-8 leading-relaxed">Open Pitch Initiative is dedicated to leveling the playing field for youth soccer players. We believe that financial status should never be a barrier to athletic excellence or elite coaching.</p>
+                <div class="space-y-6">
+                    <div class="flex gap-4"><div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center flex-shrink-0"><i data-lucide="award" class="text-emerald-900"></i></div><div><h4 class="font-bold text-emerald-900">Elite Training</h4><p class="text-sm text-slate-500">Professional level camps that would normally cost hundreds are made accessible.</p></div></div>
+                    <div class="flex gap-4"><div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center flex-shrink-0"><i data-lucide="heart" class="text-emerald-900"></i></div><div><h4 class="font-bold text-emerald-900">100% Non-Profit</h4><p class="text-sm text-slate-500">Every dollar goes back into field rentals, kits, and equipment for the players.</p></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Summer Camps Section -->
+    <section id="camps" class="py-24 px-6 bg-slate-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-emerald-900 mb-4">Summer 2025 Camps</h2>
+                <p class="text-lg text-slate-600 max-w-2xl mx-auto">High-intensity development camps at Inglewood Middle School. Choose your session and secure your spot today.</p>
+                <div class="h-1.5 w-20 bg-yellow-600 mx-auto mt-6 rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Session 1 -->
+                <div class="bg-white p-8 rounded-[2.5rem] shadow-xl border border-slate-100 flex flex-col">
+                    <h3 class="text-2xl font-bold text-emerald-900 mb-2">Session I</h3>
+                    <p class="text-yellow-600 font-bold text-lg mb-4">July 6th - 10th</p>
+                    <p class="text-slate-600 mb-6 flex-grow">Technical mastery and ball control focus. Perfect for players looking to sharpen their touch.</p>
+                    <a href="#contact" class="block w-full py-4 bg-emerald-900 text-white text-center font-bold rounded-2xl hover:bg-emerald-800 transition-all">Register Now</a>
+                </div>
+                <!-- Session 2 -->
+                <div class="bg-emerald-900 p-8 rounded-[2.5rem] shadow-2xl border border-emerald-800 flex flex-col transform lg:scale-105">
+                    <h3 class="text-2xl font-bold text-white mb-2">Session II</h3>
+                    <p class="text-yellow-500 font-bold text-lg mb-4">July 20th - 24th</p>
+                    <p class="text-emerald-100/70 mb-6 flex-grow">Mid-summer tactical intensive focusing on positioning and game IQ.</p>
+                    <a href="#contact" class="block w-full py-4 bg-white text-emerald-900 text-center font-bold rounded-2xl hover:bg-yellow-500 transition-all">Register Now</a>
+                </div>
+                <!-- Session 3 -->
+                <div class="bg-white p-8 rounded-[2.5rem] shadow-xl border border-slate-100 flex flex-col">
+                    <h3 class="text-2xl font-bold text-emerald-900 mb-2">Session III</h3>
+                    <p class="text-yellow-600 font-bold text-lg mb-4">August 10th - 14th</p>
+                    <p class="text-slate-600 mb-6 flex-grow">End of summer peak performance. Preparing athletes for their fall season.</p>
+                    <a href="#contact" class="block w-full py-4 bg-emerald-900 text-white text-center font-bold rounded-2xl hover:bg-emerald-800 transition-all">Register Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-center">
+            <div class="lg:w-1/2">
+                <h2 class="text-4xl md:text-5xl font-bold text-emerald-900 mb-6">Where We Play</h2>
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 mb-8">
+                    <div class="flex gap-4"><div class="w-12 h-12 bg-emerald-900 rounded-xl flex items-center justify-center flex-shrink-0"><i data-lucide="map-pin" class="text-white"></i></div>
+                    <div><h4 class="font-bold text-emerald-900 text-lg">Inglewood Middle School</h4><p class="text-slate-600">24120 NE 8th St, Sammamish, WA 98074</p></div></div>
+                </div>
+                <a href="https://maps.google.com?q=Inglewood+Middle+School+Sammamish+WA" target="_blank" class="inline-flex items-center gap-2 px-8 py-4 bg-emerald-900 text-white rounded-xl font-bold shadow-lg">View on Google Maps <i data-lucide="external-link" class="w-5 h-5"></i></a>
+            </div>
+            <div class="lg:w-1/2 w-full h-[400px] rounded-[3rem] overflow-hidden shadow-2xl">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2688.3687981577785!2d-122.0191845!3d47.6384218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906e0000000000%3A0x6a0e6382a8996e3!2sInglewood%20Middle%20School!5e0!3m2!1sen!2sus!4v1715421234567!5m2!1sen!2sus" class="w-full h-full border-0" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section id="donation" class="py-24 px-6 bg-emerald-900 text-white overflow-hidden relative">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16 relative z-10">
+            <div class="lg:w-1/2">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Support a Player</h2>
+                <p class="text-xl text-emerald-100/80 mb-10">Your contribution changes lives by providing scholarships to athletes who need them most.</p>
+                <div class="grid grid-cols-2 gap-8 mb-10">
+                    <div><span class="text-3xl font-bold text-yellow-500">$25</span><p class="text-xs uppercase tracking-widest text-emerald-100/60">Player Kit</p></div>
+                    <div><span class="text-3xl font-bold text-yellow-500">$450</span><p class="text-xs uppercase tracking-widest text-emerald-100/60">Full Scholarship</p></div>
+                </div>
+                <a href="#" class="inline-block px-10 py-5 bg-white text-emerald-900 rounded-2xl font-bold text-xl hover:bg-yellow-500 transition-all">Donate Now</a>
+            </div>
+            <div class="lg:w-1/2 w-full bg-white/5 p-10 rounded-[2.5rem] border border-white/10 text-center">
+                <i data-lucide="credit-card" class="text-yellow-500 w-12 h-12 mx-auto mb-6"></i>
+                <h3 class="text-2xl font-bold mb-4">Registration Fee</h3>
+                <p class="text-emerald-100/60 mb-8">Already registered? Secure your spot by paying the camp fee here.</p>
+                <a href="#" class="block w-full py-4 bg-emerald-800 text-white rounded-xl font-bold hover:bg-emerald-700">Pay Fee</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20">
+            <div>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Get in Touch</h2>
+                <div class="space-y-8 mt-12">
+                    <div class="flex items-center gap-6"><div class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center text-yellow-500"><i data-lucide="mail"></i></div><div><p class="text-slate-400 text-xs font-bold uppercase tracking-widest">Email</p><a href="mailto:Openpitchinitiative.wa@gmail.com" class="text-xl">Openpitchinitiative.wa@gmail.com</a></div></div>
+                    <div class="flex items-center gap-6"><div class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center text-yellow-500"><i data-lucide="instagram"></i></div><div><p class="text-slate-400 text-xs font-bold uppercase tracking-widest">Instagram</p><a href="https://www.instagram.com/openpitchinitiative?igsh=MWNjejFsbW5rYjN6eA==" target="_blank" class="text-xl">@openpitchinitiative</a></div></div>
+                </div>
+            </div>
+            <div class="bg-white rounded-[2rem] p-10 text-slate-900">
+                <form action="mailto:Openpitchinitiative.wa@gmail.com" method="post" enctype="text/plain" class="space-y-6">
+                    <input type="text" name="name" placeholder="Full Name" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-emerald-900">
+                    <input type="email" name="email" placeholder="Email Address" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-emerald-900">
+                    <textarea name="message" rows="4" placeholder="How can we help?" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-emerald-900 resize-none"></textarea>
+                    <button type="submit" class="w-full bg-emerald-900 text-white font-bold py-4 rounded-xl shadow-lg hover:bg-emerald-800">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-emerald-950 text-white py-12 px-6 text-center">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex items-center justify-center gap-2 mb-6">
+                <div class="w-8 h-8 bg-white rounded flex items-center justify-center"><span class="text-emerald-950 font-bold text-sm">OP</span></div>
+                <span class="font-bold tracking-tight">OPEN PITCH <span class="text-yellow-500">INITIATIVE</span></span>
+            </div>
+            <p class="text-emerald-200/40 text-sm mb-6">Providing affordable soccer opportunities in Redmond & Sammamish, WA.</p>
+            <p class="text-emerald-200/20 text-xs">© 2025 Open Pitch Initiative. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            const logo = document.getElementById('nav-logo-text');
+            const btn = document.getElementById('mobile-menu-btn');
+            if (window.scrollY > 50) {
+                nav.classList.add('glass-nav', 'shadow-md', 'py-3'); nav.classList.remove('py-4');
+                logo.classList.add('text-emerald-950'); logo.classList.remove('text-white');
+                btn.classList.add('text-emerald-950'); btn.classList.remove('text-white');
+                document.querySelectorAll('.nav-link').forEach(l => { l.classList.add('text-slate-700'); l.classList.remove('text-white/90'); });
+            } else {
+                nav.classList.remove('glass-nav', 'shadow-md', 'py-3'); nav.classList.add('py-4');
+                logo.classList.remove('text-emerald-950'); logo.classList.add('text-white');
+                btn.classList.remove('text-emerald-950'); btn.classList.add('text-white');
+                document.querySelectorAll('.nav-link').forEach(l => { l.classList.remove('text-slate-700'); l.classList.add('text-white/90'); });
+            }
+        });
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => document.getElementById('mobile-menu').classList.toggle('hidden'));
+    </script>
+</body>
+</html>
